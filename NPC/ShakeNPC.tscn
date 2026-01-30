@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnigknslku6gf"]
+
+[ext_resource type="Texture2D" uid="uid://ciqp508kmc47" path="res://Art/ShakeNPC.png" id="1_r0hu3"]
+[ext_resource type="Script" uid="uid://ce8jf8va0jy0t" path="res://NPC/shake_npc.gd" id="1_v7lea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7lea"]
+radius = 160.15305
+
+[node name="ShakeNpc" type="Node2D" unique_id=1752417084]
+script = ExtResource("1_v7lea")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375910705]
+texture = ExtResource("1_r0hu3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2060840947]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1726939459]
+shape = SubResource("CircleShape2D_v7lea")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

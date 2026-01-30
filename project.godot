@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="CameraSystem"
+run/main_scene="uid://cqxg2lsfug2vn"
+config/features=PackedStringArray("4.6", "Forward Plus")
+run/max_fps=60
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+
+[input_devices]
+
+virtual_controller/ios/enable_controller=true
+virtual_controller/ios/enable_right_thumbstick=false
+virtual_controller/ios/enable_button_a=false
+virtual_controller/ios/enable_button_b=false
+virtual_controller/ios/enable_button_x=false
+virtual_controller/ios/enable_button_y=false
+
+[layer_names]
+
+2d_physics/layer_2="Player"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+viewport/hdr_2d=true
+environment/defaults/default_clear_color=Color(0.07708613, 0.074152514, 0.07121889, 1)
